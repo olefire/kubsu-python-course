@@ -1,41 +1,42 @@
 from math import sqrt
 
 
-def findNodOfMaxOddDivision(x: int, y: int):
-    def isPrime(num: int):
-        divsCount = 0
+def fin_nod_of_max_odd_division(x: int, y: int):
+    def is_prime(num: int):
+        divs_count = 0
         for i in range(2, int(sqrt(num)) + 1):
             if num % i == 0:
-                divsCount += 1
-            if divsCount > 0:
+                divs_count += 1
+            if divs_count > 0:
                 return False
         return True
 
-    def findMaxOddDivision(number: int):
-        maxPrimeDivision = -1
+    def find_max_odd_division(number: int):
+        max_prime_division = -1
         xsqrt = int(sqrt(x))
         for i in range(xsqrt + (xsqrt % 2 - 1), 0, -2):
-            if x % i == 0 and not isPrime(i):
-                maxPrimeDivision = i
+            if x % i == 0 and not is_prime(i):
+                max_prime_division = i
                 break
-        return maxPrimeDivision
-    def findNOD(x: int, y: int):
+        return max_prime_division
+
+    def find_nod(x: int, y: int):
         if y == 0:
             return x
         else:
-            return findNOD(y, x % y)
+            return find_nod(y, x % y)
 
-    divX = findMaxOddDivision(x)
-    divY = findMaxOddDivision(y)
+    divX = find_max_odd_division(x)
+    divY = find_max_odd_division(y)
 
-    nod = findNOD(x, y)
+    nod = find_nod(x, y)
 
     return nod
 
 
-x = int(input())
-y = int(input())
+x = int(input("x: "))
+y = int(input("y: "))
 
-print(findNodOfMaxOddDivision(x, y))
+print("НОД максимального нечетного непростого делителя", fin_nod_of_max_odd_division(x, y))
 
-# print(findNodOfMaxOddDivision(1*3*6, 3*7*12)) 18
+# print(fin_nod_of_max_odd_division(1*3*6*8, 3*7*12*5)) 36
