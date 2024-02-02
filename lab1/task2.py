@@ -7,4 +7,7 @@ def maxProductNotDiv5(x: int):
             product *= curDigit
     return product
 
-print(maxProductNotDiv5(12375))
+
+x = int(input())
+print(maxProductNotDiv5(x))
+# print(maxProductNotDiv5(12375)) 42
