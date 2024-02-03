@@ -1,7 +1,7 @@
 from math import sqrt
 
 
-def fin_nod_of_max_odd_division(x: int, y: int):
+def find_nod_of_max_odd_division(x: int):
     def is_prime(num: int):
         divs_count = 0
         for i in range(2, int(sqrt(num)) + 1):
@@ -27,16 +27,13 @@ def fin_nod_of_max_odd_division(x: int, y: int):
             return find_nod(y, x % y)
 
     divX = find_max_odd_division(x)
-    divY = find_max_odd_division(y)
 
-    nod = find_nod(x, y)
+    nod = find_nod(divX, x)
 
     return nod
 
 
 x = int(input("x: "))
-y = int(input("y: "))
+print("НОД максимального нечетного непростого делителя", find_nod_of_max_odd_division(x))
 
-print("НОД максимального нечетного непростого делителя", fin_nod_of_max_odd_division(x, y))
-
-# print(fin_nod_of_max_odd_division(1*3*6*8, 3*7*12*5)) 36
+# print(find_nod_of_max_odd_division(1*3*6*8))
