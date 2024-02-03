@@ -1,4 +1,5 @@
-from lab1.task2.functioins import func3, func1, func2
+from functioins import func3, func1, func2
+
 
 def route(func: int):
     if func == 1:
