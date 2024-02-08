@@ -3,11 +3,12 @@ from math import sqrt
 
 def find_nod_of_max_odd_division(x: int):
     def is_prime(num: int):
-        divs_count = 0
-        for i in range(2, int(sqrt(num)) + 1):
+        if num == 2:
+            return True
+        if num == 1:
+            return False
+        for i in range(3, int(sqrt(num)) + 1, 2):
             if num % i == 0:
-                divs_count += 1
-            if divs_count > 0:
                 return False
         return True
 
