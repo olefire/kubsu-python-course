@@ -1,5 +1,5 @@
 def count_of_russian_letters():
-    text = input("input text here: ")
+    text = input("input text.txt here: ")
     letters = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
     count = 0
     for letter in text:

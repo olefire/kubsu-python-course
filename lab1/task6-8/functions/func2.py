@@ -1,5 +1,5 @@
 def count_of_latin_lower_letters():
-    text = input("input text here: ")
+    text = input("input text.txt here: ")
     letters = "abcdefghijklmnopqrstuvwxyz"
     used_letters = set()
     for letter in text:

@@ -1,5 +1,5 @@
 def find_min_integer():
-    text = input("input text here: ")
+    text = input("input text.txt here: ")
 
     current_num = 0
     is_positive = 1
