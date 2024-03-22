@@ -3,7 +3,7 @@ def find_dates():
               "августа", "сентября", "октября", "ноября", "декабря"}
 
     dates = []
-    string = input("input text here: ")
+    string = input("input text.txt here: ")
     i = 0
     while i < len(string):
         wp = string.find(" ", i)
